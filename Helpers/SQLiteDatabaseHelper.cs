@@ -24,12 +24,12 @@ namespace MauiCustoViagem.Helpers
 
         }
 
-        public Task<List<pedagio>> Update(pedagio p)
-        {
-            string sql = "Update pedagio set local=?, valor=? WHERE id=?";
+        //public Task<List<pedagio>> Update(pedagio p)
+        //{
+        //    string sql = "Update pedagio set local=?, valor=? WHERE id=?";
 
-            return _conn.QueryAsync<pedagio>(sql);
-        }
+        //    return _conn.QueryAsync<pedagio>(sql);
+        //}
 
         public Task<int> Delete(int id)
         {
@@ -41,11 +41,11 @@ namespace MauiCustoViagem.Helpers
             return _conn.Table<pedagio>().ToListAsync();
         }
 
-        public Task<List<pedagio>> Search(string q)
-        {
-            string sql = "SELECT * FROM Produto WHERE descricao LIKE '%" + q + "%';";
-            return _conn.QueryAsync<pedagio>(sql);
-        }
+        //public Task<List<pedagio>> Search(string q)
+        //{
+        //    string sql = "SELECT * FROM pedagio WHERE descricao LIKE '%" + q + "%';";
+        //    return _conn.QueryAsync<pedagio>(sql);
+        //}
 
     }
 
