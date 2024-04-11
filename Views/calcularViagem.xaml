@@ -4,9 +4,9 @@
              x:Class="MauiCustoViagem.Views.calcularViagem"
              Title="calcularViagem">
     <VerticalStackLayout>
-        <Label Text="Local: {Binding Origem}"  />
-        <Label Text="Destino: {Binding Destino}" />
-        <Label x:Name="lbl_valor" Text="Valor: " />
+        <Label x:Name="lbl_local" Text="Local:"  />
+        <Label x:Name="lbl_destino" Text="Destino:" />
+        <Label x:Name="lbl_valor" Text="Valor:" />
 
         <Button Text="Somar" x:Name="btn_sum" Clicked="btn_sum_Clicked" />
         

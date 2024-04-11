@@ -13,8 +13,10 @@ public partial class calcularViagem : ContentPage
 	{
 		InitializeComponent();
 
-        
-        
+        lbl_local.Text = "Origem: " + MainPage.vg.origem;
+        lbl_destino.Text = "Destino: " + MainPage.vg.destino;
+        lbl_local.IsVisible = false;
+
 
     }
 
@@ -40,6 +42,7 @@ public partial class calcularViagem : ContentPage
         total = consumo_Carro + valor_pedagio;
         lbl_valor.Text = total.ToString("C");
         await DisplayAlert("Soma total:", $"Pedagio: {valor_pedagio.ToString("C")}\nConsumo: {consumo_Carro.ToString("C")}\n---------\nTotal: {total.ToString("C")}", "Ok");
-
+        lbl_local.Text = "Valor: " + total;
+        lbl_local.IsVisible = true;
     }
 }
