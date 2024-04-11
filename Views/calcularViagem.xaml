@@ -9,6 +9,7 @@
         <Label Text="Valor: " />
 
         <Button Text="Somar" x:Name="btn_sum" Clicked="btn_sum_Clicked" />
+        
         <Button Text="Calcular nova viagem" x:Name="btn_newViagem" Clicked="btn_newViagem_Clicked" />
     </VerticalStackLayout>
 </ContentPage>

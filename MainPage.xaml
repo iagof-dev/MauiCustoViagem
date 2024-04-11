@@ -10,16 +10,16 @@
                 <Entry x:Name="txt_origem"/>
 
                 <Label Text="Destino:" />
-                <Entry x:Name="txt_destino" />
+                <Entry BindingContext="destino" x:Name="txt_destino" />
 
                 <Label Text="Distancia" />
-                <Entry x:Name="txt_distancia" />
+                <Entry BindingContext="distancia" x:Name="txt_distancia" />
 
                 <Label Text="Rendimento" />
-                <Entry x:Name="txt_rendimento" />
+                <Entry BindingContext="rendimento" x:Name="txt_rendimento" />
 
                 <Label Text="Preço Combustivel" />
-                <Entry x:Name="txt_combustivel" />
+                <Entry BindingContext="valor_combustivel" x:Name="txt_combustivel" />
             
                 <Button Margin="5" x:Name="btn_createPedagio" Text="Adicionar pedagio" Clicked="btn_createPedagio_Clicked"/>
                 <Button Margin="5" x:Name="btn_listPedagio" Text="Lista pedagio" Clicked="btn_listPedagio_Clicked"/>

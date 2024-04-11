@@ -13,8 +13,8 @@ namespace MauiCustoViagem.Models
 
         string _origem;
         string _destino;
-        string _distancia;
-        string _rendimento;
+        double _distancia;
+        double _rendimento;
         double _valor_gas;
 
         [AutoIncrement, PrimaryKey]
@@ -22,8 +22,8 @@ namespace MauiCustoViagem.Models
 
         public string origem { get => _origem; set{if (value == null)throw new Exception("Origem invalida"); _origem = value; } }
         public string destino{ get => _destino; set { if (value == null) throw new Exception("Destino invalido"); _destino = value; } }
-        public string distancia { get => _distancia; set { if (value == null) throw new Exception("Distancia invalida"); _distancia = value; } }
-        public string rendimento{ get => _rendimento; set { if (value == null) throw new Exception("Rendimento invalido"); _rendimento = value; } }
+        public double distancia { get => _distancia; set { if (value == 0.0) throw new Exception("Distancia invalida"); _distancia = value; } }
+        public double rendimento{ get => _rendimento; set { if (value == 0.0) throw new Exception("Rendimento invalido"); _rendimento = value; } }
         public double valor_gas { get => _valor_gas; set { if (value == 0.0) throw new Exception("Valor do Combustivel invalida"); _valor_gas = value; } }
 
     }
