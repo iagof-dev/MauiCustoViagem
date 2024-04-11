@@ -6,10 +6,10 @@
     <VerticalStackLayout>
         <StackLayout>
             <Label Text="Local:"/>
-            <Entry x:Name="txt_local"/>
+            <Entry BindingContext="local" x:Name="txt_local"/>
 
             <Label Text="Valor:"/>
-            <Entry x:Name="txt_valor" />
+            <Entry BindingContext="valor"  x:Name="txt_valor" />
 
             <Button Text="adicionar" x:Name="btn_enviar" Clicked="btn_enviar_Clicked"/>
             <Button Text="TESTE" x:Name="btn_teste" Clicked="btn_teste_Clicked"/>

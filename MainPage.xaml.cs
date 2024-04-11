@@ -19,6 +19,7 @@
 
         private void btn_calcular_Clicked(object sender, EventArgs e)
         {
+
             Navigation.PushAsync(new Views.calcularViagem());
         }
     }

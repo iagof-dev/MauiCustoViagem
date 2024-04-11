@@ -20,6 +20,7 @@
 
                 <Label Text="Preço Combustivel" />
                 <Entry x:Name="txt_combustivel" />
+            
                 <Button Margin="5" x:Name="btn_createPedagio" Text="Adicionar pedagio" Clicked="btn_createPedagio_Clicked"/>
                 <Button Margin="5" x:Name="btn_listPedagio" Text="Lista pedagio" Clicked="btn_listPedagio_Clicked"/>
                 <Button Margin="5" x:Name="btn_calcular" Text="Calcular" Clicked="btn_calcular_Clicked"/>
