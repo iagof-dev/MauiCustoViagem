@@ -18,18 +18,24 @@ public partial class criarPedagio : ContentPage
 			p.valor = Convert.ToDouble(txt_valor.Text);
 
 			await App.Db.Insert(p);
-		}
-		catch (Exception ex)
+			await DisplayAlert("Sucesso!", "Pedagio foi adicionado", "Ok");
+        }
+        catch (Exception ex)
 		{
 			await DisplayAlert("Erro", ex.Message, "Ok");
         }
-        await DisplayAlert("Sucesso!", "Pedagio foi adicionado", "Ok");
     }
 
-    private void btn_teste_Clicked(object sender, EventArgs e)
+    private async void btn_teste_Clicked(object sender, EventArgs e)
     {
-		List<pedagio> valores = App.Db.GetAll();
+		List<pedagio> valores = await App.Db.GetAll();
 
-        Console.WriteLine();
+		string Lista = "";
+
+        foreach (pedagio p in valores)
+        {
+			Lista += $"local: {p.local}\nvalor: {p.valor}\n";
+        }
+		await DisplayAlert("Teste", Lista, "Ok");
     }
 }
