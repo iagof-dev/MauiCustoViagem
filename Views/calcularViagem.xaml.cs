@@ -38,7 +38,7 @@ public partial class calcularViagem : ContentPage
         }
 
         total = consumo_Carro + valor_pedagio;
-
+        lbl_valor.Text = total.ToString("C");
         await DisplayAlert("Soma total:", $"Pedagio: {valor_pedagio.ToString("C")}\nConsumo: {consumo_Carro.ToString("C")}\n---------\nTotal: {total.ToString("C")}", "Ok");
 
     }
