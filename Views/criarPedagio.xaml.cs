@@ -25,17 +25,4 @@ public partial class criarPedagio : ContentPage
 			await DisplayAlert("Erro", ex.Message, "Ok");
         }
     }
-
-    private async void btn_teste_Clicked(object sender, EventArgs e)
-    {
-		List<pedagio> valores = await App.Db.GetAll();
-
-		string Lista = "";
-
-        foreach (pedagio p in valores)
-        {
-			Lista += $"local: {p.local}\nvalor: {p.valor}\n";
-        }
-		await DisplayAlert("Teste", Lista, "Ok");
-    }
 }
