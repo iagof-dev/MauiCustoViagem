@@ -15,18 +15,25 @@ public partial class calcularViagem : ContentPage
 
         lbl_local.Text = "Origem: " + MainPage.vg.origem;
         lbl_destino.Text = "Destino: " + MainPage.vg.destino;
-        lbl_local.IsVisible = false;
-
-
+        lbl_valor.IsVisible = false;
     }
 
 
     private void btn_newViagem_Clicked(object sender, EventArgs e)
     {
+        viagem empty_viagem = new viagem{
+            valor_gas = 1.0,
+            rendimento = 1.0,
+            destino = "",
+            distancia = 1.0,
+            origem = "",
+        };
 
+        MainPage.vg = empty_viagem;
+        Navigation.PushAsync(new MainPage());
     }
 
-  
+
 
     private async void btn_sum_Clicked(object sender, EventArgs e)
     {
@@ -40,9 +47,8 @@ public partial class calcularViagem : ContentPage
         }
 
         total = consumo_Carro + valor_pedagio;
-        lbl_valor.Text = total.ToString("C");
         await DisplayAlert("Soma total:", $"Pedagio: {valor_pedagio.ToString("C")}\nConsumo: {consumo_Carro.ToString("C")}\n---------\nTotal: {total.ToString("C")}", "Ok");
-        lbl_local.Text = "Valor: " + total;
-        lbl_local.IsVisible = true;
+        lbl_valor.Text = "Valor: " + total.ToString("C");
+        lbl_valor.IsVisible = true;
     }
 }
