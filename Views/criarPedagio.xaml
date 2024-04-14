@@ -11,8 +11,7 @@
             <Label Text="Valor:"/>
             <Entry BindingContext="valor"  x:Name="txt_valor" />
 
-            <Button Text="adicionar" x:Name="btn_enviar" Clicked="btn_enviar_Clicked"/>
-            <Button Text="TESTE" x:Name="btn_teste" Clicked="btn_teste_Clicked"/>
+            <Button Text="adicionar" Margin="5" x:Name="btn_enviar" Clicked="btn_enviar_Clicked"/>
 
         </StackLayout>
     </VerticalStackLayout>
